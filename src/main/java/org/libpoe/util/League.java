@@ -6,8 +6,7 @@ package org.libpoe.util;
 public enum League {
     STANDARD("Standard"),
     HARDCORE("Hardcore"),
-    DOMINATION("Domination"),
-    NEMESIS("Nemesis");
+    ESSENCE("essence");
 
     private String id;
 

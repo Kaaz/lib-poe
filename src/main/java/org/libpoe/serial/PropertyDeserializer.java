@@ -44,7 +44,7 @@ public class PropertyDeserializer implements JsonDeserializer<Property> {
                 double value = Double.parseDouble(base.get(0).getAsString().replaceAll("[^\\d.]", ""));
                 return new DecProperty(name, displayMode, AugmentColour.forId(augmentColour), value);
             } else { // Flat
-                int value = Integer.parseInt(base.get(0).getAsString().replaceAll("[^\\d]", ""));
+                int value = Integer.parseInt("0"+base.get(0).getAsString().replaceAll("[^\\d]", ""));
                 return new IntProperty(name, displayMode, AugmentColour.forId(augmentColour), value);
             }
         } else {
