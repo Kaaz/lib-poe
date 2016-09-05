@@ -1,3 +1,5 @@
+
+[![Release](https://jitpack.io/v/MaikWezinkhof/lib-poe.svg)](https://jitpack.io/#MaikWezinkhof/lib-poe)
 lib-poe
 ======
 
