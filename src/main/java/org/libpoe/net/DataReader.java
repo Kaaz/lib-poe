@@ -63,14 +63,6 @@ public class DataReader {
 
 	private String sendGET(String url) throws Exception {
 		conn = (HttpURLConnection) new URL(url).openConnection();
-//		conn.setInstanceFollowRedirects(false);
-//		conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
-//		conn.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
-//		conn.setRequestProperty("Accept-Encoding", "gzip, deflate, sdch, br");
-//		conn.setRequestProperty("Accept-Language", "nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4");
-//		conn.setRequestProperty("Host","www.pathofexile.com");
-//		conn.setRequestProperty("Connection","keep-alive");
-//		conn.setRequestProperty("Cache-Control","max-age=0");
 		for (Map.Entry<String, String> entry : properties.entrySet()) {
 			conn.setRequestProperty(entry.getKey(), entry.getValue());
 		}
@@ -126,9 +118,7 @@ public class DataReader {
 	}
 
 	public StashTab getStashTab(String league, int index) throws Exception {
-//		System.out.println(String.format(STASH_URL, league, index));
 		String data = sendGET(String.format(STASH_URL, league, index, accountname));
-//		System.out.println(data);
 		return Constants.GSON_INSTANCE.fromJson(new JsonReader(new StringReader(data)), StashTab.class);
 	}
 }
