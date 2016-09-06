@@ -7,8 +7,8 @@ package org.libpoe.model.item;
  */
 public class Equipment extends Item {
 
-    public String toString() {
-        return "Equipment{" + super.toString() + "}";
-    }
+	public String toString() {
+		return "Equipment{" + super.toString() + "}";
+	}
 
 }

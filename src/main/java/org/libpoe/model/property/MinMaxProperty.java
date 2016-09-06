@@ -9,28 +9,28 @@ import org.libpoe.util.AugmentColour;
  */
 public class MinMaxProperty extends Property {
 
-    private int minValue, maxValue;
+	private int minValue, maxValue;
 
-    public MinMaxProperty(String name, int displayMode, AugmentColour colour, int minValue, int maxValue) {
-        super(name, displayMode, colour);
-        this.minValue = minValue;
-        this.maxValue = maxValue;
-    }
+	public MinMaxProperty(String name, int displayMode, AugmentColour colour, int minValue, int maxValue) {
+		super(name, displayMode, colour);
+		this.minValue = minValue;
+		this.maxValue = maxValue;
+	}
 
-    public int getMinValue() {
-        return minValue;
-    }
+	public int getMinValue() {
+		return minValue;
+	}
 
-    public int getMaxValue() {
-        return maxValue;
-    }
+	public int getMaxValue() {
+		return maxValue;
+	}
 
-    @Override
-    public String toString() {
-        return "MinMaxProperty{" +
-                "name='" + getName() + "'" +
-                ", minValue=" + minValue +
-                ", maxValue=" + maxValue +
-                "} ";
-    }
+	@Override
+	public String toString() {
+		return "MinMaxProperty{" +
+				"name='" + getName() + "'" +
+				", minValue=" + minValue +
+				", maxValue=" + maxValue +
+				"} ";
+	}
 }

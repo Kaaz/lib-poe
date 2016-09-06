@@ -7,7 +7,7 @@ package org.libpoe.model.item;
  */
 public class Gem extends Item {
 
-    public String toString() {
-        return "Gem{" + super.toString() + "}";
-    }
+	public String toString() {
+		return "Gem{" + super.toString() + "}";
+	}
 }

@@ -9,22 +9,22 @@ import org.libpoe.util.AugmentColour;
  */
 public class PercentageProperty extends Property {
 
-    private int value;
+	private int value;
 
-    public PercentageProperty(String name, int displayMode, AugmentColour colour, int value) {
-        super(name, displayMode, colour);
-        this.value = value;
-    }
+	public PercentageProperty(String name, int displayMode, AugmentColour colour, int value) {
+		super(name, displayMode, colour);
+		this.value = value;
+	}
 
-    public int getValue() {
-        return value;
-    }
+	public int getValue() {
+		return value;
+	}
 
-    @Override
-    public String toString() {
-        return "PercentageProperty{" +
-                "name='" + getName() + "'" +
-                ", value=" + value +
-                "} ";
-    }
+	@Override
+	public String toString() {
+		return "PercentageProperty{" +
+				"name='" + getName() + "'" +
+				", value=" + value +
+				"} ";
+	}
 }

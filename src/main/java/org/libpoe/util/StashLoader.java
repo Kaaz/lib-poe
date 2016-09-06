@@ -21,52 +21,52 @@ import java.io.FileReader;
  */
 public class StashLoader {
 
-    // TODO: Flesh out class.
+	// TODO: Flesh out class.
 
-    /**
-     * Reads a stash tab from file
-     *
-     * @param fileName The file containing stash info
-     * @return Requested stash tab
-     * @throws Exception
-     */
-    public static StashTab fromFile(String fileName) throws Exception {
+	/**
+	 * Reads a stash tab from file
+	 *
+	 * @param fileName The file containing stash info
+	 * @return Requested stash tab
+	 * @throws Exception
+	 */
+	public static StashTab fromFile(String fileName) throws Exception {
 
-        RuntimeTypeAdapterFactory<Item> itemAdapter = RuntimeTypeAdapterFactory.of(Item.class, new ItemTypePredicate())
-                .registerSubtype(Currency.class)
-                .registerSubtype(Equipment.class)
-                .registerSubtype(Gem.class)
-                .registerSubtype(Map.class);
+		RuntimeTypeAdapterFactory<Item> itemAdapter = RuntimeTypeAdapterFactory.of(Item.class, new ItemTypePredicate())
+				.registerSubtype(Currency.class)
+				.registerSubtype(Equipment.class)
+				.registerSubtype(Gem.class)
+				.registerSubtype(Map.class);
 
-        Gson gson = new GsonBuilder()
-                .enableComplexMapKeySerialization()
-                .registerTypeAdapterFactory(itemAdapter)
-                .registerTypeAdapter(Property.class, new PropertyDeserializer())
-                .registerTypeAdapter(Property.class, new RequirementDeserializer())
-                .registerTypeAdapter(Sockets.class, new SocketDeserializer())
-                .registerTypeAdapter(ExplicitMod.class, new ExplicitModDeserializer())
-                .registerTypeAdapter(ImplicitMod.class, new ImplicitModDeserializer()).create();
+		Gson gson = new GsonBuilder()
+				.enableComplexMapKeySerialization()
+				.registerTypeAdapterFactory(itemAdapter)
+				.registerTypeAdapter(Property.class, new PropertyDeserializer())
+				.registerTypeAdapter(Property.class, new RequirementDeserializer())
+				.registerTypeAdapter(Sockets.class, new SocketDeserializer())
+				.registerTypeAdapter(ExplicitMod.class, new ExplicitModDeserializer())
+				.registerTypeAdapter(ImplicitMod.class, new ImplicitModDeserializer()).create();
 
-        return gson.fromJson(new JsonReader(new FileReader(fileName)), StashTab.class);
-    }
+		return gson.fromJson(new JsonReader(new FileReader(fileName)), StashTab.class);
+	}
 
-    /**
-     * Retrieves a stash tab from desired account
-     *
-     * @param info   Authentication info
-     * @param league Target league
-     * @param tabId  Index of the stash tab to retrieve
-     * @return Requested tab stash
-     */
-    public static StashTab fromAccount(AuthInfo info, League league, int tabId) {
-        DataReader reader = new DataReader(info);
-        if (reader.authenticate()) {
-            try {
-                return reader.getStashTab(league.getId(), tabId);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        return null;
-    }
+	/**
+	 * Retrieves a stash tab from desired account
+	 *
+	 * @param info   Authentication info
+	 * @param league Target league
+	 * @param tabId  Index of the stash tab to retrieve
+	 * @return Requested tab stash
+	 */
+	public static StashTab fromAccount(AuthInfo info, League league, int tabId) {
+		DataReader reader = new DataReader(info);
+		if (reader.authenticate()) {
+			try {
+				return reader.getStashTab(league.getId(), tabId);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
 }

@@ -7,16 +7,16 @@ import org.libpoe.model.property.Property;
  */
 public class ImplicitMod {
 
-    private Property property;
+	private Property property;
 
-    public ImplicitMod(Property property) {
-        this.property = property;
-    }
+	public ImplicitMod(Property property) {
+		this.property = property;
+	}
 
-    @Override
-    public String toString() {
-        return "ImplicitMod{" +
-                "property=" + property +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "ImplicitMod{" +
+				"property=" + property +
+				'}';
+	}
 }

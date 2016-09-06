@@ -9,16 +9,16 @@ import org.libpoe.model.property.Property;
  */
 public class ExplicitMod {
 
-    private Property property;
+	private Property property;
 
-    public ExplicitMod(Property property) {
-        this.property = property;
-    }
+	public ExplicitMod(Property property) {
+		this.property = property;
+	}
 
-    @Override
-    public String toString() {
-        return "ExplicitMod{" +
-                "property=" + property +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "ExplicitMod{" +
+				"property=" + property +
+				'}';
+	}
 }

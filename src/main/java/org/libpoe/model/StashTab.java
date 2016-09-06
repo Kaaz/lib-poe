@@ -9,7 +9,7 @@ import org.libpoe.model.item.Item;
  */
 public class StashTab {
 
-	private int numTabs =0;
+	private int numTabs = 0;
 	private Item[] items;
 
 	public Item[] getItems() {

@@ -15,23 +15,23 @@ import java.util.HashMap;
  */
 public class SocketDeserializer implements JsonDeserializer<Sockets> {
 
-    @Override
-    public Sockets deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
-        if (jsonElement.isJsonArray()) {
-            JsonArray sockets = jsonElement.getAsJsonArray();
-            HashMap<Integer, SocketGroup> groups = new HashMap<Integer, SocketGroup>();
-            for (JsonElement e : sockets) {
-                JsonObject obj = e.getAsJsonObject();
-                int group = obj.get("group").getAsInt();
-                Attribute attribute = Attribute.forId(obj.get("attr").getAsString());
-                Socket s = new Socket(group, attribute);
-                if (groups.get(group) == null) {
-                    groups.put(group, new SocketGroup());
-                }
-                groups.get(group).getSockets().add(s);
-            }
-            return new Sockets(new ArrayList<SocketGroup>(groups.values()));
-        }
-        return null;
-    }
+	@Override
+	public Sockets deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+		if (jsonElement.isJsonArray()) {
+			JsonArray sockets = jsonElement.getAsJsonArray();
+			HashMap<Integer, SocketGroup> groups = new HashMap<Integer, SocketGroup>();
+			for (JsonElement e : sockets) {
+				JsonObject obj = e.getAsJsonObject();
+				int group = obj.get("group").getAsInt();
+				Attribute attribute = Attribute.forId(obj.get("attr").getAsString());
+				Socket s = new Socket(group, attribute);
+				if (groups.get(group) == null) {
+					groups.put(group, new SocketGroup());
+				}
+				groups.get(group).getSockets().add(s);
+			}
+			return new Sockets(new ArrayList<SocketGroup>(groups.values()));
+		}
+		return null;
+	}
 }

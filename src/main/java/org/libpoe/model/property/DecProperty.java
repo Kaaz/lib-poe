@@ -9,22 +9,22 @@ import org.libpoe.util.AugmentColour;
  */
 public class DecProperty extends Property {
 
-    private double value;
+	private double value;
 
-    public DecProperty(String name, int displayMode, AugmentColour colour, double value) {
-        super(name, displayMode, colour);
-        this.value = value;
-    }
+	public DecProperty(String name, int displayMode, AugmentColour colour, double value) {
+		super(name, displayMode, colour);
+		this.value = value;
+	}
 
-    public double getValue() {
-        return value;
-    }
+	public double getValue() {
+		return value;
+	}
 
-    @Override
-    public String toString() {
-        return "DecProperty{" +
-                "name='" + getName() + "'" +
-                ", value=" + value +
-                "} ";
-    }
+	@Override
+	public String toString() {
+		return "DecProperty{" +
+				"name='" + getName() + "'" +
+				", value=" + value +
+				"} ";
+	}
 }

@@ -22,12 +22,12 @@ import java.util.zip.GZIPInputStream;
  * TODO: Add throttle to prevent lockout from GGG server
  */
 public class DataReader {
-	private String accountname = "";
 	private static final Pattern usernamePattern = Pattern.compile("<title>View Profile - Path of Exile - ([a-zA-Z0-9_-]+)</title>");
 	private static final String LOGIN_URL = "https://www.pathofexile.com/login";
 	private static final String MY_ACCOUNT_URL = "https://www.pathofexile.com/my-account";
 	private static final String CHARACTER_URL = "https://www.pathofexile.com/character-window/get-characters";
 	private static final String STASH_URL = "https://www.pathofexile.com/character-window/get-stash-items?league=%s&tabs=0&tabIndex=%s&accountName=%s";
+	private String accountname = "";
 	private HttpURLConnection conn;
 
 	private AuthInfo info;

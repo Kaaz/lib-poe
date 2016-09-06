@@ -7,8 +7,8 @@ package org.libpoe.model.item;
  */
 public class Currency extends Item {
 
-    public String toString() {
-        return "Currency{" + super.toString() + "}";
-    }
+	public String toString() {
+		return "Currency{" + super.toString() + "}";
+	}
 
 }

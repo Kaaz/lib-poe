@@ -9,28 +9,28 @@ import java.util.ArrayList;
  */
 public class Sockets {
 
-    private ArrayList<SocketGroup> groups;
+	private ArrayList<SocketGroup> groups;
 
-    public Sockets(ArrayList<SocketGroup> groups) {
-        this.groups = groups;
-    }
+	public Sockets(ArrayList<SocketGroup> groups) {
+		this.groups = groups;
+	}
 
-    public ArrayList<SocketGroup> getGroups() {
-        return groups;
-    }
+	public ArrayList<SocketGroup> getGroups() {
+		return groups;
+	}
 
-    public int getSocketCount() {
-        int out = 0;
-        for (SocketGroup g : groups) {
-            out += g.getLinkCount();
-        }
-        return out;
-    }
+	public int getSocketCount() {
+		int out = 0;
+		for (SocketGroup g : groups) {
+			out += g.getLinkCount();
+		}
+		return out;
+	}
 
-    @Override
-    public String toString() {
-        return "Sockets{" +
-                "count=" + getSocketCount() +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Sockets{" +
+				"count=" + getSocketCount() +
+				'}';
+	}
 }

@@ -13,115 +13,117 @@ import java.util.Arrays;
  * Time: 19:40
  */
 public class Item {
-    private boolean verified, support, identified;
-    private int w, h, x, y, frameType;
-    private String icon, league, name, typeLine, inventoryId;
-    private Property[] properties, requirements;
-    private ExplicitMod[] explicitMods;
-    private ImplicitMod[] implicitMods;
-    private Sockets sockets;
+	private boolean verified, support, identified;
+	private int w, h, x, y, frameType;
+	private String icon, league, name, typeLine, inventoryId;
+	private Property[] properties, requirements;
+	private ExplicitMod[] explicitMods;
+	private ImplicitMod[] implicitMods;
+	private Sockets sockets;
 
-    public boolean isVerified() {
-        return verified;
-    }
+	public boolean isVerified() {
+		return verified;
+	}
 
-    public boolean isSupport() {
-        return support;
-    }
+	public boolean isSupport() {
+		return support;
+	}
 
-    public boolean isIdentified() {
-        return identified;
-    }
+	public boolean isIdentified() {
+		return identified;
+	}
 
-    public int getW() {
-        return w;
-    }
+	public int getW() {
+		return w;
+	}
 
-    public int getH() {
-        return h;
-    }
+	public int getH() {
+		return h;
+	}
 
-    public int getX() {
-        return x;
-    }
+	public int getX() {
+		return x;
+	}
 
-    public int getY() {
-        return y;
-    }
+	public int getY() {
+		return y;
+	}
 
-    public int getFrameType() {
-        return frameType;
-    }
+	public int getFrameType() {
+		return frameType;
+	}
 
-    public String getIcon() {
-        return icon;
-    }
+	public String getIcon() {
+		return icon;
+	}
 
-    public String getLeague() {
-        return league;
-    }
+	public String getLeague() {
+		return league;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getTypeLine() {
-        return typeLine;
-    }
+	public String getTypeLine() {
+		return typeLine;
+	}
 
-    public String getInventoryId() {
-        return inventoryId;
-    }
+	public String getInventoryId() {
+		return inventoryId;
+	}
 
-    public Property[] getProperties() {
-        return properties;
-    }
+	public Property[] getProperties() {
+		return properties;
+	}
 
-    public Property[] getRequirements() {
-        return requirements;
-    }
+	public Property[] getRequirements() {
+		return requirements;
+	}
 
-    public ExplicitMod[] getExplicitMods() {
-        return explicitMods;
-    }
+	public ExplicitMod[] getExplicitMods() {
+		return explicitMods;
+	}
 
-    public ImplicitMod[] getImplicitMods() { return implicitMods; }
+	public ImplicitMod[] getImplicitMods() {
+		return implicitMods;
+	}
 
-    public Property getProperty(String name) {
-        for (Property p : properties) {
-            if (p.getName().equals(name)) return p;
-        }
-        return null;
-    }
+	public Property getProperty(String name) {
+		for (Property p : properties) {
+			if (p.getName().equals(name)) return p;
+		}
+		return null;
+	}
 
-    public Property getRequirement(String name) {
-        for (Property p : requirements) {
-            if (p.getName().equals(name)) return p;
-        }
-        return null;
-    }
+	public Property getRequirement(String name) {
+		for (Property p : requirements) {
+			if (p.getName().equals(name)) return p;
+		}
+		return null;
+	}
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "verified=" + verified +
-                ", support=" + support +
-                ", identified=" + identified +
-                ", w=" + w +
-                ", h=" + h +
-                ", x=" + x +
-                ", y=" + y +
-                ", frameType=" + frameType +
-                ", icon='" + icon + '\'' +
-                ", league='" + league + '\'' +
-                ", sockets='" + sockets +
-                ", name='" + name + '\'' +
-                ", typeLine='" + typeLine + '\'' +
-                ", inventoryId='" + inventoryId + '\'' +
-                ", properties=" + Arrays.toString(properties) +
-                ", requirements=" + Arrays.toString(requirements) +
-                ", implicitMods=" + Arrays.toString(implicitMods) +
-                ", explicitMods=" + Arrays.toString(explicitMods) +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Item{" +
+				"verified=" + verified +
+				", support=" + support +
+				", identified=" + identified +
+				", w=" + w +
+				", h=" + h +
+				", x=" + x +
+				", y=" + y +
+				", frameType=" + frameType +
+				", icon='" + icon + '\'' +
+				", league='" + league + '\'' +
+				", sockets='" + sockets +
+				", name='" + name + '\'' +
+				", typeLine='" + typeLine + '\'' +
+				", inventoryId='" + inventoryId + '\'' +
+				", properties=" + Arrays.toString(properties) +
+				", requirements=" + Arrays.toString(requirements) +
+				", implicitMods=" + Arrays.toString(implicitMods) +
+				", explicitMods=" + Arrays.toString(explicitMods) +
+				'}';
+	}
 }

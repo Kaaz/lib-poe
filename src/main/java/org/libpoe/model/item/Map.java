@@ -7,8 +7,8 @@ package org.libpoe.model.item;
  */
 public class Map extends Item {
 
-    public String toString() {
-        return "Map{" + super.toString() + "}";
-    }
+	public String toString() {
+		return "Map{" + super.toString() + "}";
+	}
 
 }
